@@ -1,4 +1,4 @@
-#coin
+# coin
 Create a basic invoicing service that allows users to create invoices and pay in digital currency
 
 Requirements:
