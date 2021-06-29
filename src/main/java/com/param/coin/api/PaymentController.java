@@ -19,7 +19,6 @@ import java.util.stream.Collectors;
 
 /**
  * Controller class for Payments related REST APIs
- * Created by Paramveer Singh on 2019-10-23.
  */
 @RestController
 @RequestMapping("/payments")
@@ -32,13 +31,6 @@ public class PaymentController {
 	public Mono<PaymentDto> createPayment(@RequestBody PaymentPostDto paymentDto) {
 		return Mono.just(convert(
 				paymentService.createPayment(paymentDto.getAmount(), paymentDto.getDca(), paymentDto.getType())));
-	}
-
-	@GetMapping(value = {"/{dca}"}, produces = "application/json")
-	public Flux<PaymentDto> getPayments(@PathVariable String dca) {
-		List<PaymentDto> paymentDtos = paymentService.getInvoicePayments(dca).stream().map(this::convert).collect(
-				Collectors.toList());
-		return Flux.fromIterable(paymentDtos);
 	}
 
 	private PaymentDto convert(Payment p){

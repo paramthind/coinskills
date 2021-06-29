@@ -8,7 +8,6 @@ import javax.transaction.Transactional;
 
 /**
  * TODO: Add transactions for each action done for a invoice
- * Created by Paramveer Singh on 2019-10-23.
  */
 @Service
 @Transactional

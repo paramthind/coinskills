@@ -18,8 +18,6 @@ import java.security.spec.ECPoint;
 
 /**
  * Bitcoin Address generator
- *
- * Created by Paramveer Singh on 2019-10-23.
  */
 public class BitCoinCurrencyEngine implements CurrencyEngine{
 

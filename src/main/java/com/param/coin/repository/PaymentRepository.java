@@ -6,11 +6,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-/**
- * Created by Paramveer Singh on 2019-10-24.
- */
-public interface PaymentRepository extends CrudRepository<Payment, String> {
 
-	List<Payment> findPaymentsByInvoiceDca(@Param("dca") String dca);
+public interface PaymentRepository extends CrudRepository<Payment, String> {
 
 }

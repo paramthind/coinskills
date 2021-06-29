@@ -17,9 +17,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 
-/**
- * Created by Paramveer Singh on 2019-10-23.
- */
+
 @Table(name = "payment")
 @Entity
 public class Payment {

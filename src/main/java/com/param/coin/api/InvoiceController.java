@@ -21,7 +21,6 @@ import java.util.stream.Collectors;
 
 /**
  * Controller class for Invoice related REST APIs
- * Created by Paramveer Singh on 2019-10-23.
  */
 @RestController
 @RequestMapping("/invoices")
@@ -42,12 +41,6 @@ public class InvoiceController {
 		return Mono.just(convert(invoiceService.getInvoice(dca)));
 	}
 
-	@GetMapping(value = {"/{dca}/payments"}, produces = "application/json")
-	public Flux<PaymentDto> getPayments(@PathVariable String dca) {
-		List<PaymentDto> paymentDtos = paymentService.getInvoicePayments(dca).stream().map(this::convertPayment).collect(
-				Collectors.toList());
-		return Flux.fromIterable(paymentDtos);
-	}
 
 	private PaymentDto convertPayment(Payment p){
 		return new PaymentDto(p.getId(), p.getAmount(), p.getInvoice().getDca(), p.getType());

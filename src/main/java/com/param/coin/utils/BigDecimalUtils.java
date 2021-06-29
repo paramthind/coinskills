@@ -6,7 +6,6 @@ import java.math.RoundingMode;
 /**
  * Contains helper methods related to BigDecimal operations.
  *
- * Created by Paramveer Singh on 2019-10-24.
  */
 public class BigDecimalUtils {
 

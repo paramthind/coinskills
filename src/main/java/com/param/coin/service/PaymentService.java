@@ -17,7 +17,6 @@ import java.util.List;
 /**
  * Handles Operations related to Payments
  *
- * Created by Paramveer Singh on 2019-10-23.
  */
 @Service
 @Transactional
@@ -52,8 +51,4 @@ public class PaymentService {
 		return payment;
 	}
 
-	public List<Payment> getInvoicePayments(String dca) {
-		List<Payment> paymentList =  paymentRepository.findPaymentsByInvoiceDca(dca);
-		return paymentList;
-	}
 }

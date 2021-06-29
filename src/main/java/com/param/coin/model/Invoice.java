@@ -10,9 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 
-/**
- * Created by Paramveer Singh on 2019-10-23.
- */
+
 @Table(name = "invoice")
 @Entity
 public class Invoice {
@@ -33,8 +31,8 @@ public class Invoice {
 	public Invoice() {
 	}
 
-	public Invoice(String dca, BigDecimal amount) {
-		this.dca = dca;
+
+	public Invoice(BigDecimal amount) {
 		this.amount = amount;
 		this.creationTime = System.currentTimeMillis();
 	}

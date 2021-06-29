@@ -6,9 +6,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Date;
 
-/**
- * Created by Paramveer Singh on 2019-10-24.
- */
+
 public class InvoiceDto {
 	private String dca; //Digital currency address
 	private BigDecimal amount;

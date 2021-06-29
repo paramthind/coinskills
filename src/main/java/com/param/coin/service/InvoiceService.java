@@ -19,8 +19,6 @@ import java.util.Optional;
 
 /**
  * Handles operations related to Invoice
- *
- * Created by Paramveer Singh on 2019-10-23.
  */
 @Service
 @Transactional
@@ -46,10 +44,11 @@ public class InvoiceService {
 		String address = DCAFactory.getBitcoinCurrencyEngine().generateAddress();
 
 		log.debug("Address for new Invoice is: {}", address);
-		Invoice invoice = new Invoice(address, amount);
+		Invoice invoice = new Invoice(amount);
 		//save to DB
 		invoiceRepository.save(invoice);
 		log.info("Invoice Generated with address: {}", address);
+		invoice.setDca(address);
 		return invoice;
 	}
 

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 /**
  * Handles exceptions that occur in this project and returns a json response.
- * Created by Paramveer Singh on 2019-10-23.
  */
 @ControllerAdvice
 public class CoinExceptionHandler {

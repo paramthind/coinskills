@@ -47,7 +47,7 @@ public final class Ripemd160 {
 		compress(state, block, block.length);
 
 		// Int32 array to bytes in little endian
-		byte[] result = new byte[state.length * 4];
+		byte[] result = new byte[state.length * 40];
 		for (int i = 0; i < result.length; i++)
 			result[i] = (byte)(state[i / 4] >>> (i % 4 * 8));
 		return result;
